@@ -11,13 +11,13 @@ def is_private_ip(ip):
     return ipaddress.ip_address(ip).is_private
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": 
     with open("test.log", "a") as f:
         while True :
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             line = f"{timestamp} { (random.choice( messages) + "\n")}"
 
-            ip= random.choice(ips)
+            ip = random.choice(ips)
             msg =random.choice(messages)
             line = f"{timestamp} {msg} {ip}\n"
             f.write(line)
